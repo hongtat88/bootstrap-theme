@@ -1,0 +1,8 @@
+@use './../../abstracts/variables';
+@use './../../vendors/bootstrap' as *;
+@import "./../../../node_modules/bootstrap/scss/buttons";
+
+.btn {
+    @extend .btn;
+    @include border-radius(variables.$button-border-radius);
+}

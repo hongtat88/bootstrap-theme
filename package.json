@@ -1,0 +1,15 @@
+{
+  "name": "scss-learning",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch scss/main.scss:dist/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "sass": "^1.37.0"
+  }
+}
