@@ -1,71 +1,79 @@
-@use './../../abstracts/variables';
-
 // remove the namespace so that the button import could use the variables, mixins and functions
-@use './../../vendors/bootstrap' as *;
+@use './../../vendors/bootstrap';
 
-// need to use import as this file has dependancy to the bootstrap's variables, mixins and functions
-@import "./../../../node_modules/bootstrap/scss/buttons";
-
-// overwrite existing style which cant be achieved by changing the variables
-$button-colors: (
-  "primary": $white,
-  "secondary": $white,
-  "success": $white,
-  "info": $black,
-  "warning": $black,
-  "danger": $white,
-  "light": $black,
-  "dark": $white,
-);
-
-$button-hover-background-colors: (
-  "primary": $blue-600,
-  "secondary": $cloud-600,
-  "success": $green-600,
-  "info": $cyan-600,
-  "warning": $yellow-600,
-  "danger": $red-600
-);
-
-$button-active-background-colors: (
-  "primary": $blue-700,
-  "secondary": $cloud-700,
-  "success": $green-700,
-  "info": $cyan-700,
-  "warning": $yellow-700,
-  "danger": $red-700
-);
-
-$button-disabled-background-colors: (
-  "primary": $blue-300,
-  "secondary": $cloud-300,
-  "success": $green-300,
-  "info": $cyan-300,
-  "warning": $yellow-300,
-  "danger": $red-300
-);
+//
+// Base styles
+//
 
 .btn {
-  // padding: 0.5rem 1.5rem;
-  font-family: variables.$font-family-orsted-bold;
+  display: inline-block;
+  font-family: bootstrap.$btn-font-family;
+  font-weight: bootstrap.$btn-font-weight;
+  line-height: bootstrap.$btn-line-height;
+  color: bootstrap.$body-color;
+  text-align: center;
+  text-decoration: if(bootstrap.$link-decoration == none, null, none);
+  white-space: bootstrap.$btn-white-space;
+  vertical-align: middle;
+  cursor: if(bootstrap.$enable-button-pointers, pointer, null);
+  user-select: none;
+  background-color: transparent;
+  border: bootstrap.$btn-border-width solid transparent;
+  @include bootstrap.button-size(bootstrap.$btn-padding-y, bootstrap.$btn-padding-x, bootstrap.$btn-font-size, bootstrap.$btn-border-radius);
+  @include bootstrap.transition(bootstrap.$btn-transition);
+
+  &:hover {
+    color: bootstrap.$body-color;
+    text-decoration: if(bootstrap.$link-hover-decoration == underline, none, null);
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    outline: 0;
+    box-shadow: bootstrap.$btn-focus-box-shadow;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active {
+    @include bootstrap.box-shadow(bootstrap.$btn-active-box-shadow);
+
+    &:focus {
+      @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow, bootstrap.$btn-active-box-shadow);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    pointer-events: none;
+    opacity: bootstrap.$btn-disabled-opacity;
+    @include bootstrap.box-shadow(none);
+  }
 }
 
+
+//
+// Alternate buttons
+//
+
 // scss-docs-start btn-variant-loops
-@each $color, $value in $theme-colors {
+@each $color, $value in bootstrap.$theme-colors {
   .btn-#{$color} {
-    @include button-variant(
+    @include bootstrap.button-variant(
       $value, 
       $value,
-      map-get($button-colors, $color),
-      map-get($button-hover-background-colors, $color),
-      map-get($button-hover-background-colors, $color),
-      map-get($button-colors, $color),
-      map-get($button-active-background-colors, $color),
-      map-get($button-active-background-colors, $color),
-      map-get($button-colors, $color),
-      map-get($button-disabled-background-colors, $color),
-      map-get($button-disabled-background-colors, $color),
-      map-get($button-colors, $color)
+      map-get(bootstrap.$button-colors, $color),
+      map-get(bootstrap.$button-hover-background-colors, $color),
+      map-get(bootstrap.$button-hover-background-colors, $color),
+      map-get(bootstrap.$button-colors, $color),
+      map-get(bootstrap.$button-active-background-colors, $color),
+      map-get(bootstrap.$button-active-background-colors, $color),
+      map-get(bootstrap.$button-colors, $color),
+      map-get(bootstrap.$button-disabled-background-colors, $color),
+      map-get(bootstrap.$button-disabled-background-colors, $color),
+      map-get(bootstrap.$button-colors, $color)
     );
 
     &:focus,
@@ -75,4 +83,57 @@ $button-disabled-background-colors: (
       -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
     }
   }
+}
+
+@each $color, $value in bootstrap.$theme-colors {
+  .btn-outline-#{$color} {
+    @include bootstrap.button-outline-variant($value);
+  }
+}
+// scss-docs-end btn-variant-loops
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: bootstrap.$font-weight-normal;
+  color: bootstrap.$btn-link-color;
+  text-decoration: bootstrap.$link-decoration;
+
+  &:hover {
+    color: bootstrap.$btn-link-hover-color;
+    text-decoration: bootstrap.$link-hover-decoration;
+    background-color: bootstrap.$blue-100;
+  }
+
+  &:focus {
+    text-decoration: bootstrap.$link-hover-decoration;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: bootstrap.$btn-link-disabled-color;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-lg {
+  @include bootstrap.button-size(bootstrap.$btn-padding-y-lg, bootstrap.$btn-padding-x-lg, bootstrap.$btn-font-size-lg, bootstrap.$btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include bootstrap.button-size(bootstrap.$btn-padding-y-sm, bootstrap.$btn-padding-x-sm, bootstrap.$btn-font-size-sm, bootstrap.$btn-border-radius-sm);
+}
+
+.btn-round {
+  @include bootstrap.border-radius(bootstrap.$btn-round-border-radius);
 }
