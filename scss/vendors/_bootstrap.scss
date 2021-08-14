@@ -225,13 +225,24 @@ $button-hover-background-colors: (
   "danger": $red-600,
 ) !default;
 
-$button-outline-background-colors: (
+$button-outline-hover-background-colors: (
   "primary": $blue-100,
   "secondary": $cloud-100,
   "success": $green-100,
   "info": $cyan-100,
   "warning": $yellow-100,
   "danger": $red-100,
+  "light": $cloud,
+  "dark": $gray,
+) !default;
+
+$button-outline-active-background-colors: (
+  "primary": $blue-200,
+  "secondary": $cloud-200,
+  "success": $green-200,
+  "info": $cyan-200,
+  "warning": $yellow-200,
+  "danger": $red-200,
   "light": $cloud,
   "dark": $gray,
 ) !default;

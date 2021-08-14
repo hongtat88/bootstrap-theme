@@ -103,16 +103,26 @@
 
     &:hover {
       background-color: map-get(
-        bootstrap.$button-outline-background-colors,
+        bootstrap.$button-outline-hover-background-colors,
         $color
       );
       color: $value;
     }
 
     &:active {
+      color: $value;
+      background-color: map-get(
+        bootstrap.$button-outline-active-background-colors,
+        $color
+      );
     }
 
     &:focus {
+      color: $value;
+      background-color: bootstrap.$white;
+      box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+      -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+      -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
     }
   }
 }
@@ -126,7 +136,7 @@
 .btn-link {
   font-weight: bootstrap.$font-weight-normal;
   color: bootstrap.$btn-link-color;
-  text-decoration: bootstrap.$link-decoration;
+  text-decoration: none;
 
   &:active {
     background-color: bootstrap.$blue-200;
