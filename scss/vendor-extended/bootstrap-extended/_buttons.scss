@@ -157,4 +157,14 @@
 
 .btn-round {
   @include bootstrap.border-radius(bootstrap.$btn-round-border-radius);
+  padding: bootstrap.$btn-round-padding;
+  display: inline;
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+    -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+    -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+  }
 }
