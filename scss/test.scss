@@ -24,18 +24,16 @@ $orsted-blue-800: shade-color(variables.$orsted-blue, 60%) !default;
 $orsted-blue-900: shade-color(variables.$orsted-blue, 80%) !default;
 
 .bg-orsted-new-100 {
-  background-color: #EAF4FB;
+  background-color: #eaf4fb;
 }
 
 .bg-orsted-new-200 {
-  background-color: #EAF4FB;
+  background-color: #bfddf3;
 }
 
 .bg-orsted-new-300 {
   background-color: rgba(64, 153, 218, 0.4);
 }
-
-
 
 .bg-orsted-new-500 {
   background-color: variables.$orsted-blue;
