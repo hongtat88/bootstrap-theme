@@ -99,6 +99,21 @@
 @each $color, $value in bootstrap.$theme-colors {
   .btn-outline-#{$color} {
     @include bootstrap.button-outline-variant($value);
+    border: map-get(bootstrap.$border-widths, 2) solid $value;
+
+    &:hover {
+      background-color: map-get(
+        bootstrap.$button-outline-background-colors,
+        $color
+      );
+      color: $value;
+    }
+
+    &:active {
+    }
+
+    &:focus {
+    }
   }
 }
 // scss-docs-end btn-variant-loops
