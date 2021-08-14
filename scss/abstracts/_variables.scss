@@ -1,1 +1,56 @@
-$button-border-radius: 25px;
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $asset-url: 'http://cdn.example.com/assets/';
+$asset-url: "assets/" !default;
+
+$orsted-blue: #4099da;
+$orsted-white: #ffffff;
+$orsted-aqua: #8ecdc8;
+$orsted-aubergine: #644c76;
+$orsted-text: #3b4956;
+
+$orsted-cloud: #99a4ae;
+$orsted-cloud-75: #b3bbc2;
+$orsted-cloud-50: #ccd1d7;
+$orsted-cloud-25: #e5e8eb;
+$orsted-cloud-10: #f5f6f7;
+
+$orsted-sand-light: #d8d1ca;
+$orsted-sand-light-75: #e2dcd7;
+$orsted-sand-light-50: #ebe8e4;
+$orsted-sand-light-25: #f5f3f2;
+
+$orsted-sand-dark: #b7ada5;
+$orsted-sand-dark-75: #c9c1bb;
+$orsted-sand-dark-50: #dbd6d2;
+$orsted-sand-dark-25: #edebe8;
+
+$orsted-blue-light: #eaf4fb;
+$orsted-blue-dark: #1d6396;
+
+$orsted-aqua-light: #cae8e5;
+$orsted-aqua-dark: #377c76;
+
+$orsted-earth-light: #dad0e1;
+$orsted-earth-dark: #4f3c5d;
+
+$orsted-green: #117e36;
+$orsted-orange: #e89457;
+$orsted-red: #e85757;
+$orsted-yellow: #fdd779;
+
+$font-family-orsted-regular: OrstedRegular, "roboto";
+$font-family-orsted-bold: OrstedBold, "roboto";
+
+$orsted-button-primary-color: $orsted-white;
+$orsted-button-primary-background-color: $orsted-blue;
+$orsted-button-primary-hover-background-color: #257fc0;
+$orsted-button-primary-active-background-color: $orsted-blue-dark;
+$orsted-button-primary-disabled-background-color: rgba(64, 153, 218, 0.4);
+
+$orsted-button-secondary-color: $orsted-white;
+$orsted-button-secondary-background-color: $orsted-cloud;
+$orsted-button-secondary-hover-background-color: #99A4AE;
+$orsted-button-secondary-active-background-color: $orsted-blue-dark;
+$orsted-button-secondary-disabled-background-color: rgba(64, 153, 218, 0.4);

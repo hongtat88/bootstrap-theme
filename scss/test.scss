@@ -1,0 +1,112 @@
+@use './abstracts/variables';
+
+// remove the namespace so that the button import could use the variables, mixins and functions
+@use './vendors/bootstrap' as *;
+
+$orsted-cloud-100: tint-color(variables.$orsted-cloud, 80%) !default;
+$orsted-cloud-200: tint-color(variables.$orsted-cloud, 60%) !default;
+$orsted-cloud-300: tint-color(variables.$orsted-cloud, 40%) !default;
+$orsted-cloud-400: tint-color(variables.$orsted-cloud, 20%) !default;
+$orsted-cloud-500: variables.$orsted-cloud !default;
+$orsted-cloud-600: shade-color(variables.$orsted-cloud, 20%) !default;
+$orsted-cloud-700: shade-color(variables.$orsted-cloud, 40%) !default;
+$orsted-cloud-800: shade-color(variables.$orsted-cloud, 60%) !default;
+$orsted-cloud-900: shade-color(variables.$orsted-cloud, 80%) !default;
+
+$orsted-blue-100: tint-color(variables.$orsted-blue, 80%) !default;
+$orsted-blue-200: tint-color(variables.$orsted-blue, 60%) !default;
+$orsted-blue-300: tint-color(variables.$orsted-blue, 40%) !default;
+$orsted-blue-400: tint-color(variables.$orsted-blue, 20%) !default;
+$orsted-blue-500: variables.$orsted-blue !default;
+$orsted-blue-600: shade-color(variables.$orsted-blue, 20%) !default;
+$orsted-blue-700: shade-color(variables.$orsted-blue, 40%) !default;
+$orsted-blue-800: shade-color(variables.$orsted-blue, 60%) !default;
+$orsted-blue-900: shade-color(variables.$orsted-blue, 80%) !default;
+
+.bg-orsted-new-300 {
+  background-color: rgba(64, 153, 218, 0.4);
+}
+
+.bg-orsted-new-500 {
+  background-color: variables.$orsted-blue;
+}
+
+.bg-orsted-new-600 {
+  background-color: #257fc0;
+}
+
+.bg-orsted-new-700 {
+  background-color: variables.$orsted-blue-dark;
+}
+
+.bg-orsted-cloud-100 {
+  background-color: $orsted-cloud-100;
+}
+
+.bg-orsted-cloud-200 {
+  background-color: $orsted-cloud-200;
+}
+
+.bg-orsted-cloud-300 {
+  background-color: $orsted-cloud-300;
+}
+
+.bg-orsted-cloud-400 {
+  background-color: $orsted-cloud-400;
+}
+
+.bg-orsted-cloud-500 {
+  background-color: $orsted-cloud-500;
+}
+
+.bg-orsted-cloud-600 {
+  background-color: $orsted-cloud-600;
+}
+
+.bg-orsted-cloud-700 {
+  background-color: $orsted-cloud-700;
+}
+
+.bg-orsted-cloud-800 {
+  background-color: $orsted-cloud-800;
+}
+
+.bg-orsted-cloud-900 {
+  background-color: $orsted-cloud-900;
+}
+
+.bg-orsted-blue-100 {
+  background-color: $orsted-blue-100;
+}
+
+.bg-orsted-blue-200 {
+  background-color: $orsted-blue-200;
+}
+
+.bg-orsted-blue-300 {
+  background-color: $orsted-blue-300;
+}
+
+.bg-orsted-blue-400 {
+  background-color: $orsted-blue-400;
+}
+
+.bg-orsted-blue-500 {
+  background-color: $orsted-blue-500;
+}
+
+.bg-orsted-blue-600 {
+  background-color: $orsted-blue-600;
+}
+
+.bg-orsted-blue-700 {
+  background-color: $orsted-blue-700;
+}
+
+.bg-orsted-blue-800 {
+  background-color: $orsted-blue-800;
+}
+
+.bg-orsted-blue-900 {
+  background-color: $orsted-blue-900;
+}

@@ -1,15 +1,119 @@
-// @import "functions";
-// @import "variables";
-// @import "mixins";
-// @import "utilities";
-// @forward "./../../node_modules/bootstrap/scss/variables";
-// @use './../../node_modules/bootstrap/scss/bootstrap' with (
-//     $primary: #322348
-// );
+@use './../abstracts/variables';
 
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "./../../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// scss-docs-start color-variables
+$blue: variables.$orsted-blue !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: variables.$orsted-red !default;
+$orange: variables.$orsted-orange !default;
+$yellow: variables.$orsted-yellow !default;
+$green: variables.$orsted-green !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+$cloud: variables.$orsted-cloud !default;
+// scss-docs-end color-variables
+
+// scss-docs-start theme-color-variables
+$primary: variables.$orsted-blue !default;
+$secondary: variables.$orsted-cloud !default;
+$success: variables.$orsted-green !default;
+$info: variables.$orsted-aqua !default;
+$warning: variables.$orsted-yellow !default;
+$danger: variables.$orsted-red !default;
+$light: variables.$orsted-cloud-10 !default;
+$dark: variables.$orsted-text !default;
+// scss-docs-end theme-color-variables
+
+// fusv-disable
+$cloud-100: tint-color($cloud, 80%) !default;
+$cloud-200: tint-color($cloud, 60%) !default;
+$cloud-300: tint-color($cloud, 40%) !default;
+$cloud-400: tint-color($cloud, 20%) !default;
+$cloud-500: $cloud !default;
+$cloud-600: shade-color($cloud, 20%) !default;
+$cloud-700: shade-color($cloud, 40%) !default;
+$cloud-800: shade-color($cloud, 60%) !default;
+$cloud-900: shade-color($cloud, 80%) !default;
+// fusv-enable
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-color: variables.$orsted-text !default;
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              true !default;
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        true !default;
+$enable-grid-classes:         true !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     false !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+// scss-docs-start border-radius-variables
+$border-radius: 0.25rem !default;
+$border-radius-sm: 0.2rem !default;
+$border-radius-lg: 0.3rem !default;
+$border-radius-pill: 50rem !default;
+// scss-docs-end border-radius-variables
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// scss-docs-start font-variables
+// stylelint-disable value-keyword-case
+$font-family-base: variables.$font-family-orsted-regular !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+
+$display-font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem,
+) !default;
+
+// 3. Include remainder of required Bootstrap stylesheets
 @import "./../../node_modules/bootstrap/scss/variables";
 @import "./../../node_modules/bootstrap/scss/mixins";
 @import "./../../node_modules/bootstrap/scss/utilities";
 
-// @import "./../../node_modules/bootstrap/scss/variables";
+// Layout & components
+@import "./../../node_modules/bootstrap/scss/root";
+@import "./../../node_modules/bootstrap/scss/reboot";
+@import "./../../node_modules/bootstrap/scss/type";
+@import "./../../node_modules/bootstrap/scss/images";
+@import "./../../node_modules/bootstrap/scss/containers";
+@import "./../../node_modules/bootstrap/scss/grid";
+
+// Helpers
+@import "./../../node_modules/bootstrap/scss/helpers";
+
+// Utilities
+@import "./../../node_modules/bootstrap/scss/utilities/api";

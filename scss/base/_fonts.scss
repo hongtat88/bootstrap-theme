@@ -1,0 +1,101 @@
+// -----------------------------------------------------------------------------
+// This file contains all @font-face declarations, if any.
+// -----------------------------------------------------------------------------
+@use './../abstracts';
+
+@font-face {
+  font-family: "OrstedBlack";
+  src: abstracts.font("OrstedSans-Black.eot");
+  src: abstracts.font("OrstedSans-Black.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-Black.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedBlackItalic";
+  src: abstracts.font("OrstedSans-BlackItalic.eot");
+  src: abstracts.font("OrstedSans-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-BlackItalic.woff2") format("woff2"),
+    abstracts.font("OrstedSans-BlackItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedBold";
+  src: abstracts.font("OrstedSans-Bold.eot");
+  src: abstracts.font("OrstedSans-Bold.eot?#iefix") format("embedded-opentype"),
+    abstracts.font("OrstedSans-Bold.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedBoldItalic";
+  src: abstracts.font("OrstedSans-BoldItalic.eot");
+  src: abstracts.font("OrstedSans-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-BoldItalic.woff2") format("woff2"),
+    abstracts.font("OrstedSans-BoldItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedItalic";
+  src: abstracts.font("OrstedSans-Italic.eot");
+  src: abstracts.font("OrstedSans-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-Italic.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedLight";
+  src: abstracts.font("OrstedSans-Light.eot");
+  src: abstracts.font("OrstedSans-Light.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-Light.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedLightItalic";
+  src: abstracts.font("OrstedSans-LightItalic.eot");
+  src: abstracts.font("OrstedSans-LightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-LightItalic.woff2") format("woff2"),
+    abstracts.font("OrstedSans-LightItalic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedRegular";
+  src: abstracts.font("OrstedSans-Regular.eot");
+  src: abstracts.font("OrstedSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    abstracts.font("OrstedSans-Regular.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OrstedBold";
+  src: abstracts.font("OrstedSans-Bold.eot");
+  src: abstracts.font("OrstedSans-Bold.eot?#iefix") format("embedded-opentype"),
+    abstracts.font("OrstedSans-Bold.woff2") format("woff2"),
+    abstracts.font("OrstedSans-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
