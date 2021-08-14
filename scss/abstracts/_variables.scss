@@ -40,6 +40,41 @@ $orsted-orange: #e89457;
 $orsted-red: #e85757;
 $orsted-yellow: #fdd779;
 
+// font types
 $font-family-orsted-regular: OrstedRegular, "roboto";
 $font-family-orsted-bold: OrstedBold, "roboto";
+
+// titles
+$large-title-font-family: $font-family-orsted-bold;
+$large-title-font-size: 2rem;
+$large-title-line-height: 3rem;
+
+$title-1-font-family: $font-family-orsted-regular;
+$title-1-font-size: 1.875rem;
+$title-1-line-height: 2.8125rem;
+
+$title-2-font-family: $font-family-orsted-bold;
+$title-2-font-size: 1.5rem;
+$title-2-line-height: 2.25rem;
+
+$subtitle-1-font-family: $font-family-orsted-bold;
+$subtitle-1-font-size: 1.125rem;
+$subtitle-1-line-height: 1.6875rem;
+
+$subtitle-2-font-family: $font-family-orsted-bold;
+$subtitle-2-font-size: 1rem;
+$subtitle-2-line-height: 1.5rem;
+
+$subhead-1-font-family: $font-family-orsted-regular;
+$subhead-1-font-size: 0.875rem;
+$subhead-1-line-height: 1.3125rem;
+
+$subhead-2-font-family: $font-family-orsted-regular;
+$subhead-2-font-size: 0.75rem;
+$subhead-2-line-height: 1.125rem;
+
+$caption-font-family: $font-family-orsted-regular;
+$caption-font-size: 0.6875rem;
+$caption-line-height: 1rem;
+
 

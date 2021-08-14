@@ -30,3 +30,19 @@
 @function font($path, $base: variables.$asset-url) {
   @return asset($base, 'fonts/', $path);
 }
+
+/// Tint a color: mix a color with white
+/// @param {Color} $color - color to mix with white
+/// @param {Number} $weight - percentage of `$color` in returned color 
+/// @return {Color}
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+/// Shade a color: mix a color with black
+/// @param {Color} $color - color to shade
+/// @param {Number} $weight - percentage of `$color` in returned color
+/// @return {Color}
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}

@@ -1,0 +1,67 @@
+@use './../abstracts/variables';
+@use './../abstracts/mixins';
+
+
+.large-title {
+  @include mixins.title-variant(
+    variables.$large-title-font-family,
+    variables.$large-title-font-size,
+    variables.$large-title-line-height
+  );
+}
+
+.title-1 {
+  @include mixins.title-variant(
+    variables.$title-1-font-family,
+    variables.$title-1-font-size,
+    variables.$title-1-line-height
+  );
+}
+
+.title-2 {
+  @include mixins.title-variant(
+    variables.$title-2-font-family,
+    variables.$title-2-font-size,
+    variables.$title-2-line-height
+  );
+}
+
+.subtitle-1 {
+  @include mixins.title-variant(
+    variables.$subtitle-1-font-family,
+    variables.$subtitle-1-font-size,
+    variables.$subtitle-1-line-height
+  );
+}
+
+.subtitle-2 {
+  @include mixins.title-variant(
+    variables.$subtitle-2-font-family,
+    variables.$subtitle-2-font-size,
+    variables.$subtitle-2-line-height
+  );
+}
+
+.subhead-1 {
+  @include mixins.title-variant(
+    variables.$subhead-1-font-family,
+    variables.$subhead-1-font-size,
+    variables.$subhead-1-line-height
+  );
+}
+
+.subhead-2 {
+  @include mixins.title-variant(
+    variables.$subhead-2-font-family,
+    variables.$subhead-2-font-size,
+    variables.$subhead-2-line-height
+  );
+}
+
+.caption {
+  @include mixins.title-variant(
+    variables.$caption-font-family,
+    variables.$caption-font-size,
+    variables.$caption-line-height
+  );
+}
