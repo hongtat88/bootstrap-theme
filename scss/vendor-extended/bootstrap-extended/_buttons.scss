@@ -173,7 +173,7 @@
 .btn-round {
   @include bootstrap.border-radius(bootstrap.$btn-round-border-radius);
   padding: bootstrap.$btn-round-padding;
-  display: inline;
+  display: inline-flex;
 
   &:focus,
   &:active,
