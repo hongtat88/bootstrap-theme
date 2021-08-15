@@ -195,7 +195,9 @@ $font-family-base: variables.$font-family-orsted-regular !default;
 
 // bootstrap > button
 $btn-font-family: variables.$font-family-orsted-bold !default;
-$btn-round-border-radius: 50% !default;
+
+$btn-focus-box-shadow:        0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
+$btn-active-box-shadow:       0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
 
 $btn-round-padding: 0.75rem;
 $btn-padding-y: 0.5rem;
@@ -204,6 +206,11 @@ $btn-padding-y-sm: 0.25rem;
 $btn-padding-x-sm: 1rem;
 $btn-padding-y-lg: 0.75rem;
 $btn-padding-x-lg: 2rem;
+$btn-font-size-sm: 1rem;
+
+$btn-link-hover-text-decoration: none;
+$btn-round-border-radius: 50% !default;
+
 
 $button-colors: (
   "primary": $white,

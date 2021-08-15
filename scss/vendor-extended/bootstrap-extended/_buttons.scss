@@ -87,11 +87,18 @@
       map-get(bootstrap.$button-colors, $color)
     );
 
-    &:focus,
-    &:active:focus {
-      box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-      -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-      -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+    .btn-check:checked + &,
+    .btn-check:active + &,
+    &:active,
+    &.active {
+      @include bootstrap.box-shadow(bootstrap.$btn-active-box-shadow);
+
+      &:focus {
+        @include bootstrap.box-shadow(
+          bootstrap.$btn-focus-box-shadow,
+          bootstrap.$btn-active-box-shadow
+        );
+      }
     }
   }
 }
@@ -115,14 +122,19 @@
         bootstrap.$button-outline-active-background-colors,
         $color
       );
+
+      &:focus {
+        @include bootstrap.box-shadow(
+          bootstrap.$btn-focus-box-shadow,
+          bootstrap.$btn-active-box-shadow
+        );
+      }
     }
 
     &:focus {
       color: $value;
       background-color: bootstrap.$white;
-      box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-      -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-      -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+      @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow);
     }
   }
 }
@@ -144,15 +156,13 @@
 
   &:hover {
     color: bootstrap.$btn-link-hover-color;
-    text-decoration: bootstrap.$link-hover-decoration;
+    text-decoration: bootstrap.$btn-link-hover-text-decoration;
     background-color: bootstrap.$blue-100;
   }
 
   &:focus {
-    text-decoration: bootstrap.$link-hover-decoration;
-    box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-    -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-    -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+    text-decoration: bootstrap.$btn-link-hover-text-decoration;
+    @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow);
   }
 
   // No need for an active state here
@@ -169,6 +179,20 @@
     bootstrap.$btn-font-size-lg,
     bootstrap.$btn-border-radius-lg
   );
+
+  &:focus {
+    @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow);
+  }
+
+  &:active {
+    @include bootstrap.box-shadow(bootstrap.$btn-active-box-shadow);
+    &:focus {
+      @include bootstrap.box-shadow(
+        bootstrap.$btn-focus-box-shadow,
+        bootstrap.$btn-active-box-shadow
+      );
+    }
+  }
 }
 
 .btn-sm {
@@ -178,6 +202,20 @@
     bootstrap.$btn-font-size-sm,
     bootstrap.$btn-border-radius-sm
   );
+
+  &:focus {
+    @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow);
+  }
+
+  &:active {
+    @include bootstrap.box-shadow(bootstrap.$btn-active-box-shadow);
+    &:focus {
+      @include bootstrap.box-shadow(
+        bootstrap.$btn-focus-box-shadow,
+        bootstrap.$btn-active-box-shadow
+      );
+    }
+  }
 }
 
 .btn-round {
@@ -185,11 +223,17 @@
   padding: bootstrap.$btn-round-padding;
   display: inline-flex;
 
-  &:focus,
-  &:active,
-  &:active:focus {
-    box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-    -webkit-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
-    -moz-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5);
+  &:focus {
+    @include bootstrap.box-shadow(bootstrap.$btn-focus-box-shadow);
+  }
+
+  &:active {
+    @include bootstrap.box-shadow(bootstrap.$btn-active-box-shadow);
+    &:focus {
+      @include bootstrap.box-shadow(
+        bootstrap.$btn-focus-box-shadow,
+        bootstrap.$btn-active-box-shadow
+      );
+    }
   }
 }
