@@ -134,6 +134,7 @@ $cyan-900: shade-color($cyan, 80%) !default;
 
 $cloud-100: tint-color($cloud, 80%) !default;
 $cloud-200: tint-color($cloud, 60%) !default;
+$cloud-250: #E5E8EB;
 $cloud-300: tint-color($cloud, 40%) !default;
 $cloud-400: tint-color($cloud, 20%) !default;
 $cloud-500: $cloud !default;
@@ -196,8 +197,8 @@ $font-family-base: variables.$font-family-orsted-regular !default;
 // bootstrap > button
 $btn-font-family: variables.$font-family-orsted-bold !default;
 
-$btn-focus-box-shadow:        0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
-$btn-active-box-shadow:       0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
+$btn-focus-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
+$btn-active-box-shadow: 0px 0px 11px 5px rgba(18, 102, 240, 0.5) !default;
 
 $btn-round-padding: 0.75rem;
 $btn-padding-y: 0.5rem;
@@ -210,7 +211,6 @@ $btn-font-size-sm: 1rem;
 
 $btn-link-hover-text-decoration: none;
 $btn-round-border-radius: 50% !default;
-
 
 $button-colors: (
   "primary": $white,
@@ -274,6 +274,18 @@ $button-disabled-background-colors: (
 
 // End bootstrap button
 
+// Accordion
+$accordion-button-color: variables.$orsted-text;
+$accordion-button-bg: $white;
+$accordion-button-hover-bg: $cloud-250;
+$accordion-button-active-color: variables.$orsted-text;
+$accordion-button-active-bg: $white;
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+$accordion-button-padding-x: 1.5rem;
+$accordion-button-padding-y: 1rem;
+// End accordion
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "./../../node_modules/bootstrap/scss/variables";
 @import "./../../node_modules/bootstrap/scss/mixins";
@@ -294,7 +306,6 @@ $button-disabled-background-colors: (
 @import "./../../node_modules/bootstrap/scss/nav";
 @import "./../../node_modules/bootstrap/scss/navbar";
 @import "./../../node_modules/bootstrap/scss/card";
-@import "./../../node_modules/bootstrap/scss/accordion";
 @import "./../../node_modules/bootstrap/scss/breadcrumb";
 @import "./../../node_modules/bootstrap/scss/pagination";
 @import "./../../node_modules/bootstrap/scss/badge";

@@ -1,0 +1,24 @@
+@use './../../vendors/bootstrap' as *;
+
+@import "./../../../node_modules/bootstrap/scss/accordion";
+
+.accordion-item {
+  border: none;
+}
+.accordion-button {
+  &:hover {
+    background-color: $accordion-button-hover-bg;
+  }
+
+  &:active {
+    @include box-shadow(none);
+  }
+
+  &:disabled {
+      
+  }
+
+  &:not(.collapsed) {
+    box-shadow: none;
+  }
+}
