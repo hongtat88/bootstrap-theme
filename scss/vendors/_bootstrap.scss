@@ -275,16 +275,33 @@ $button-disabled-background-colors: (
 // End bootstrap button
 
 // Accordion
+$accordion-border-radius: 0;
+$accordion-inner-border-radius: 0;
+
 $accordion-button-color: variables.$orsted-text;
 $accordion-button-bg: $white;
 $accordion-button-hover-bg: $cloud-250;
 $accordion-button-active-color: variables.$orsted-text;
 $accordion-button-active-bg: $white;
-$accordion-border-radius: 0;
-$accordion-inner-border-radius: 0;
 $accordion-button-padding-x: 1.5rem;
 $accordion-button-padding-y: 1rem;
+$accordion-button-disabled-opacity: .65 !default;
 // End accordion
+
+// utilities
+
+$bg-colors: (
+  "primary": $white,
+  "secondary": $white,
+  "success": $white,
+  "info": $black,
+  "warning": $black,
+  "danger": $white,
+  "light": $black,
+  "dark": $white,
+) !default;
+
+// End utilities
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "./../../node_modules/bootstrap/scss/variables";

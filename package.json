@@ -1,5 +1,5 @@
 {
-  "name": "scss-learning",
+  "name": "oxygen",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.0.2"
+  },
+  "devDependencies": {
     "http-server": "^0.12.3",
     "sass": "^1.37.0"
   }

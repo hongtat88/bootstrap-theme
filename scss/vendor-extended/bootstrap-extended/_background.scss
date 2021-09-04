@@ -1,0 +1,7 @@
+@use './../../vendors/bootstrap';
+
+@each $color, $value in bootstrap.$bg-colors {
+  .bg-#{$color} {
+      color: $value;
+  }
+}
